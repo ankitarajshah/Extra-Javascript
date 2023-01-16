@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            font-family: sans-serif;
+        }
+        body{
+            width: 50%;
+            /* max-width: 800px;
+            min-width: 480px; */
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Guess the Number</h1>
+    <p> We have selected a random number between 1 - 10.
+        See if you can guess it.</p>
+    
+    <div class="form">
+        <label for="guessfield">Enter a guess:</label>
+        <input type="text" id="guessfield" class="guessfield">
+        <input type="submit" name="" id="submitguess" value="Submit Guess" class="guessSubmit">
+    </div>
+    <script>
+        // random value generated
+        var y = Math.floor(Math.random()*10+1);
+
+        // counting the number of guesses
+        // made for correct Guess
+        var guess = 1;
+        // number guessed by user 
+        document.getElementById("submitguess").onclick = function(){
+
+            var x = document.getElementById("guessfield").value;
+
+            if(x == y)
+            {
+                alert("Congratulation you guessed it right in " + guess + "Guess");
+            }
+            else if(x>y){
+                guess++;
+                alert("OOPs! Sorry try smaller number")
+            }
+            else if(x<y){
+                guess++;
+                alert("OOPs! Sorry try greater number")
+            }
+
+
+        }
+
+       
+    </script>
+</body>
+</html>

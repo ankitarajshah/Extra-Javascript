@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Human{
+            // constructor(){
+                // this.gender = 'female';
+                // this.age = '32';
+                gender = 'female';
+                age ='32';
+            //}
+            printGender = ()=>{
+                console.log(this.gender);
+                console.log(this.age);
+            }
+        }
+
+        class Person  extends Human{
+            //constructor(){
+              //  super();
+                //this.name ='Ankita';
+                name ='Ankita';
+           // }
+
+            printMyName(){
+                console.log(this.name);
+            }
+        }
+
+        const person = new Person()
+        person.printMyName();
+        person.printGender();
+        
+
+
+    </script>
+</body>
+</html>
